@@ -1,6 +1,6 @@
 
 from criarArvore import ArvoreRB
-vetor = []
+
 
 class Arquivo:
 
@@ -17,7 +17,7 @@ class Arquivo:
         abrir_arquivo = open(nome, 'r')
         for comando in abrir_arquivo:
             comando = comando.rstrip()
-           # print(comando)
+            print("Mostrar comandos,",comando)
             self.vetor.append(comando)
         abrir_arquivo.close()
 
@@ -40,7 +40,7 @@ class Arquivo:
         print("Tamanho do vetor1: ",len(self.vetor))
         arqv_saida = open(nome, 'a')
         arqv_saida.truncate(0)
-        arvore = main()
+        arvore = ArvoreRB()
 
 
         for i in range(0,len(self.vetor),1):
